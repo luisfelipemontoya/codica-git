@@ -5,8 +5,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/capitalize.test.js"
+    "test": "babel-node tests/capitalize.test.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/node": "^7.29.0",
+    "@babel/preset-env": "^7.29.0",
+    "@babel/register": "^7.28.6",
+    "babel-plugin-espower": "^3.0.1",
+    "intelli-espower-loader": "^1.1.0",
+    "power-assert": "^1.6.1"
+  }
 }
