@@ -1,10 +1,17 @@
-import assert from 'power-assert';
 import capitalize from '../src/capitalize.js';
 
-assert(capitalize('hello') === 'Hello');
-assert(capitalize('Hello') === 'Hello');
-assert(capitalize('') === '');
-assert(capitalize('javaScript') === 'JavaScript');
-assert(capitalize('world') === 'World');
+test('capitalizes first letter', () => {
+  expect(capitalize('hello')).toBe('Hello');
+});
 
-console.log('✅ Tests de capitalize pasaron');
+test('returns empty string when input is empty', () => {
+  expect(capitalize('')).toBe('');
+});
+
+test('does not change already capitalized word', () => {
+  expect(capitalize('Hello')).toBe('Hello');
+});
+
+test('only capitalizes first letter', () => {
+  expect(capitalize('javaScript')).toBe('JavaScript');
+});

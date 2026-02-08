@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "babel-node tests/capitalize.test.js"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "@babel/register": "^7.28.6",
     "babel-plugin-espower": "^3.0.1",
     "intelli-espower-loader": "^1.1.0",
+    "jest": "^30.2.0",
     "power-assert": "^1.6.1"
   }
 }
