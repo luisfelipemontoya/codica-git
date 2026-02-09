@@ -1,17 +1,28 @@
 import capitalize from '../src/capitalize.js';
 
-test('capitalizes first letter', () => {
-  expect(capitalize('hello')).toBe('Hello');
+describe('capitalize()', () => {
+
+  // Casos normales
+  describe('basic behavior', () => {
+    test('capitalizes a lowercase word', () => {
+      expect(capitalize('hello')).toBe('Hello');
+    });
+
+    test('does not change an already capitalized word', () => {
+      expect(capitalize('World')).toBe('World');
+    });
+  });
+
+  //  Edge cases
+  describe('edge cases', () => {
+    test('empty string', () => {
+      expect(capitalize('')).toBe('');
+    });
+
+    test('one character', () => {
+      expect(capitalize('a')).toBe('A');
+    });
+  });
+
 });
 
-test('returns empty string when input is empty', () => {
-  expect(capitalize('')).toBe('');
-});
-
-test('does not change already capitalized word', () => {
-  expect(capitalize('Hello')).toBe('Hello');
-});
-
-test('only capitalizes first letter', () => {
-  expect(capitalize('javaScript')).toBe('JavaScript');
-});
